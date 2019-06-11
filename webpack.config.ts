@@ -15,7 +15,7 @@ const config: webpack.Configuration = {
 			{
 				exclude: /node_modules/,
 				loader: 'ts-loader',
-				options: { configFile: tsconfig },
+				options: { configFile: tsconfig, compilerOptions: { sourceMap: false } },
 				test: /\.ts$/
 			}
 		]
