@@ -9,8 +9,7 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"build": "npm run prebuild && webpack --mode production --config webpack.config.js --progress",
-		"prebuild": "tsc --esModuleInterop webpack.config.ts",
+		"build": "webpack --mode production --config webpack.config.ts --progress",
 		"start:prod": "node ./dist/server.js",
 		"start": "ts-node-dev --respawn --pretty -r tsconfig-paths/register ./src/app.ts"
 	},
