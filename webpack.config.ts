@@ -24,7 +24,7 @@ const config: webpack.Configuration = {
 		minimizer: [new TerserPlugin({ parallel: true, terserOptions: { ecma: 6 } })]
 	},
 	output: { path: path.resolve(__dirname, 'dist'), filename: 'server.js' },
-	plugins: [new CleanWebpackPlugin({ verbose: true })],
+	plugins: [new CleanWebpackPlugin({ verbose: true }) as any],
 	resolve: {
 		extensions,
 		plugins: [new TsconfigPathsPlugin({ configFile: tsconfig, extensions })]
